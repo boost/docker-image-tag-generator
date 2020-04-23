@@ -1,0 +1,17 @@
+name: 'docker-image-tag-generator'
+description: 'Turns a branch name and commit SHA into a Docker image tag'
+inputs:
+  branch:
+    description: 'branch/ref name'
+    required: true
+  sha:
+    description: 'commit SHA'
+    required: true
+outputs:
+  docker-image-tag:
+    description: 'the Docker image tag'
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: 'tag'
